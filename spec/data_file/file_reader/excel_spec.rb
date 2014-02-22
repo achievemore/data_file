@@ -3,7 +3,7 @@ require "file_reader"
 
 describe FileReader::Excel do
   let(:xls_file) do
-    File.open(File.expand_path("../../../support/fixtures/files/test.xls", __FILE__))
+    File.open(File.expand_path("../../../support/fixtures/test.xls", __FILE__))
   end
 
   let(:object) { described_class.new reader }

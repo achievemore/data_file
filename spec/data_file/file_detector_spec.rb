@@ -3,7 +3,7 @@ require "file_detector"
 
 describe FileDetector do
   let(:object) { described_class.new(file_path) }
-  let(:path) { "../../support/fixtures/files/#{file}" }
+  let(:path) { "../../support/fixtures/#{file}" }
   let(:file_path) { File.open(File.expand_path(path, __FILE__)) }
 
   describe "#text?" do

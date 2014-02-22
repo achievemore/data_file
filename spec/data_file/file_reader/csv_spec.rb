@@ -3,10 +3,10 @@ require "file_reader"
 
 describe FileReader::CSV do
   let(:csv_file) do
-    File.open(File.expand_path("../../../support/fixtures/files/test.csv", __FILE__))
+    File.open(File.expand_path("../../../support/fixtures/test.csv", __FILE__))
   end
   let(:txt_file) do
-    File.open(File.expand_path("../../../support/fixtures/files/test.txt", __FILE__))
+    File.open(File.expand_path("../../../support/fixtures/test.txt", __FILE__))
   end
 
   let(:file) { csv_file }
