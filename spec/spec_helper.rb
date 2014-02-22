@@ -1,6 +1,8 @@
 if ENV['COVERAGE']
   require 'simplecov'
-  SimpleCov.start
+  SimpleCov.start do
+    add_filter "/spec/"
+  end
 end
 
 require "data_file"
