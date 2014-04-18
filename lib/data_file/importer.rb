@@ -7,12 +7,10 @@ module DataFile
     end
 
     def each_row(row)
-      if csv?
-        row
-      else
-        row = rows[row]
-        defined?(POI) ? row.cells.map(&:value) : row.to_a
-      end
+      return row if csv?
+
+      row = reader.parser.rows[row]
+      defined?(POI) ? row.cells.map(&:value) : row.to_a
     end
 
     def rows
