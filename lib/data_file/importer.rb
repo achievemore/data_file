@@ -10,7 +10,7 @@ module DataFile
       if csv?
         row
       else
-        row = reader.rows[row]
+        row = rows[row]
         defined?(POI) ? row.cells.map(&:value) : row.to_a
       end
     end
